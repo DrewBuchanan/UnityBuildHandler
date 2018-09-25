@@ -366,19 +366,7 @@ public class BuildHandler : EditorWindow
 		//These are to speed things up a little bit.
 		string projectNameFile = null;
 		Debug.Log (target.ToString ());
-		if (target.ToString () == "WebPlayer")
-		{
-			projectNameFile = projectName + "_" + version;
-		}
-		else if (target.ToString () == "StandaloneWindows")
-		{
-			projectNameFile = projectName + "_" + version + ".exe";
-		}
-		else if (target.ToString () == "StandaloneOSXUniversal")
-		{
-			projectNameFile = projectName + "_" + version + ".app";
-		}
-		else if (target.ToString () == "Android")
+		if (target.ToString () == "Android")
 		{
 			string app;
 			if (output.Contains ("Underground"))
